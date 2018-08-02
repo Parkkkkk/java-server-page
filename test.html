@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script
+src="http://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous"></script>
+
+<style>
+	div {
+		width:50px; height:50px;
+		background-color:Orange;
+		position:relative;
+		}
+
+</style>
+
+</head>
+<body>
+
+	<button id ="start_btn">효과시작</button>
+	<button id ="stop_btn">효과정지</button>
+	<div></div>
+
+<script>
+	$("button#start_btn").click(function (){
+		$("div").animate({left:'+=200'},3000);
+		$("div").animate({top:'+=100'},3000);
+		$("div").animate({left:'+=100'},3000);
+		$("div").animate({top:'+=100'},3000);
+			
+	});
+	
+	$("button#stop_btn").click(function(){
+		
+		$("div").stop(false,false);
+	});
+	
+	
+
+
+</script>
+
+
+</body>
+</html>
